@@ -1,0 +1,19 @@
+#header{
+    background-color: black;
+    color: blanchedalmond;
+    height: 50px;
+}
+
+#main{
+    background-color: grey;
+    height: 920px;
+    border: 4px solid black;  
+}
+#main button {
+   background-color: black;
+}
+
+#emp{
+    background-color:yellow;
+    color: red;
+}

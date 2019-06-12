@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 id="header">
+    To Do List {{ title }}!
+  </h1>
+
+  <div id="main" >
+     
+
+  <img width="300" alt="Angular Logo" src="assets\Todo.jpg"/><br>
+
+  <input matInput placeholder="Add Duties" value="" [(ngModel)]= "myjobs" /> <button mat-fab (click)="add()"><mat-icon aria-hidden="false" aria-label="adding">add</mat-icon></button><input [(ngModel)]= "myprio" matInput placeholder="Add Priorities" value=""/><br>
+  <mat-card style="margin-bottom: 2px;" *ngFor = "let jobs of Duties">
+   
+    
+    {{jobs.itemName}} : {{jobs.itemPriority}} 
+    <button mat-fab (click)= "EditJobs(jobs)"> <mat-icon aria-hidden="false" aria-label="Example home icon" >edit</mat-icon> </button> 
+    <button mat-fab (click) = "remove(jobs)"><mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon></button>
+    
+  </mat-card>
+
+  <div id="emp" *ngIf = "empty">
+      <h1> You got No value! </h1>
+   </div>
+</div>
+
+<form> </form>
+<router-outlet></router-outlet>
